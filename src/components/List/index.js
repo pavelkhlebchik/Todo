@@ -16,12 +16,7 @@ const List = () => (
           description={item.description}
           />)
       }
-      <div />
     </div>
-    <button>View All</button>
-    <button>Add Todo</button>
-    <span>or</span>
-    <button>Add random Todo :)</button>
   </div>
 );
 
