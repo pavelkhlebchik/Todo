@@ -3,15 +3,15 @@
   background-color: #2d2d2d;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: inherit;
+  padding-top: 125px;
   width: 100%;
 }
 
 .title {
   color: #f9fff2;
   font-size: 64px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   text-transform: uppercase;
 }
 
