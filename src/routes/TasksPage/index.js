@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import List from '../../components/List';
 
-import s from './style.module.css';
+// import s from './style.module.css';
 
 const TasksPage = () => (
   <Layout>
-    <div className={s.view_all_task}>
-    </div>
+    <List />
   </Layout>
 );
 

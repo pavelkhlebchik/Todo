@@ -14,16 +14,17 @@ const HomePage = () => {
   const handleClickAdd = () => {
     navigate('/new');
   };
-
   return <>
-        <Layout>
-            <List />
-            <button onClick={handleClickViewAll}>View All</button>
-            <button onClick={handleClickAdd}>Add Todo</button>
-            <span>or</span>
-            <button>Add random Todo :)</button>
-        </Layout>
-    </>;
+    <Layout>
+      <List
+        viewFull={false}
+      />
+      <button onClick={handleClickViewAll}>View All</button>
+      <button onClick={handleClickAdd}>Add Todo</button>
+      <span>or</span>
+      <button>Add random Todo :)</button>
+    </Layout>
+  </>;
 };
 
 export default HomePage;
