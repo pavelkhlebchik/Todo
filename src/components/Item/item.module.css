@@ -1,8 +1,9 @@
 .task {
   background-color: #fff;
-  border-radius: 9999px;
+  border-radius: 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 35px;
   padding-top: 15px;
   padding-right: 22px;
@@ -11,15 +12,25 @@
   width: 500px;
 }
 
+.task_full_card {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px;
+  max-height: 400px;
+  border-radius: 25px;
+  padding-bottom: 30px;
+}
+
+
 .task_status {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  border: 1px solid #d9d9d9;
 }
 
 .task_status_not_completed {
-  border: 1px solid #d9d9d9;
   background-color: #d9d9d9;
 }
 
@@ -28,9 +39,31 @@
   background-color: #7edf8e;
 }
 
+.task_checkmark {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 23px;
+  width: 14px;
+  border-bottom: 7px solid #FFFFFF;
+  border-right: 7px solid #ffffff;
+}
+
+.task_full_card .task_status {
+  width: 60px;
+  height: 60px;
+}
+
 .task_inner {
   width: 300px;
   cursor: default;
+}
+
+.task_full_card .task_inner {
+  min-height: 250px;
+  width: 100%;
+  text-align: center;
+  padding-top: 16px;
+  margin-bottom: 35px;
 }
 
 .task_title {
@@ -38,6 +71,12 @@
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.task_full_card .task_title {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .task_description {
@@ -49,18 +88,33 @@
   white-space: nowrap;
 }
 
+.task_full_card .task_description {
+  text-align: start;
+  font-size: 16px;
+  text-overflow: inherit;
+  white-space: normal;
+  word-break: break-word;
+}
+
 .task_view_btn {
   border: none;
   background-color: #2d77af;
   border: 1px solid #2d77af;
-  border-radius: 9999px;
+  border-radius: 35px;
   color: #ffffff;
   cursor: pointer;
   font-size: 12px;
   font-weight: lighter;
   letter-spacing: 1px;
+  height: 40px;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.task_full_card .task_view_btn {
+  margin: 0 auto;
+  height: 45px;
+  width: 180px;
 }
 
 .task_view_btn:hover {
