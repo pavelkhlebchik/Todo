@@ -1,11 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+
 import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 
-import Layout from '../../components/Layout';
+import { addTask } from '../../store/tasks';
+import Card from '../../components/Card';
 
-import { add } from '../../store/tasks';
-import s from './style.module.css';
+import Layout from '../../components/Layout';
 
 const NewCardPage = () => {
   const [title, setTitle] = useState('');
@@ -16,7 +18,7 @@ const NewCardPage = () => {
 
   const dispatch = useDispatch();
 
-  const handleClickSubmit = (e) => {
+  const handleClickAdd = (e) => {
     e.preventDefault();
 
     const card = {
@@ -25,7 +27,7 @@ const NewCardPage = () => {
       status,
     };
 
-    dispatch(add(card));
+    dispatch(addTask(card));
 
     navigate('/');
   };
@@ -34,37 +36,19 @@ const NewCardPage = () => {
     setValue(e.target.value);
   };
 
+  const handleChangeStatus = () => setStatus((prevstate) => !prevstate);
   return <>
     <Layout>
-      <form className={s.new_card_form}>
-        <button
-          type="button"
-          onClick={() => setStatus((prevstate) => !prevstate)}
-        >
-          Finish
-        </button>
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          id="title"
-          value={title}
-          onChange={(e) => handleChange(e, setTitle)}
-        />
-        <label htmlFor="description">Description</label>
-        <input
-          type="text"
-          id="description"
-          value={description}
-          onChange={(e) => handleChange(e, setDescription)}
-        />
-        <button
-          type="submit"
-          onClick={handleClickSubmit}
-        >Update</button>
-        <button type="button">Delete</button>
-      </form>
+      <Card
+        handleClickSubmit={handleClickAdd}
+        handleChangeStatus={handleChangeStatus}
+        handleChangeTitle={(e) => handleChange(e, setTitle)}
+        handleChangeDescription={(e) => handleChange(e, setDescription)}
+        status={status}
+        title={title}
+        description={description}
+      />
     </Layout>
   </>;
 };
-
 export default NewCardPage;
