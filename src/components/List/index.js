@@ -23,8 +23,9 @@ const List = ({ viewFull = true }) => {
     navigate('/card');
   };
 
-  return <div className={cn(s.wrapper, {
+  return <div className={cn({
     [s.full]: viewFull === true,
+    [s.short]: viewFull === false,
   })}>
     {
       tasks.map((item) => (viewFull
