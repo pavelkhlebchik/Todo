@@ -1,0 +1,119 @@
+.card_form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card_status {
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: -100px;
+  top: 47px;
+}
+
+.card_status_complete {
+  background-color: #7edf8e;
+}
+
+.card_status_not_complete {
+  background-color: #d9d9d9;
+}
+
+.card_checkmark {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 35px;
+  width: 24px;
+  border-bottom: 12px solid #FFFFFF;
+  border-right: 12px solid #ffffff;
+}
+
+.card_title_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.card_description_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  margin-bottom: 40px;
+}
+
+.card_title_label,
+.card_description_label {
+  color: #ffffff;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.card_description_input {
+  height: 100%;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.card_title_input,
+.card_description_input {
+  border-radius: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 28px;
+  width: 350px;
+}
+
+.card_title_input {
+  font-size: 24px;
+  padding-left: 25px;
+}
+
+.card_description_input {
+  font-size: 16px;
+  color: #2c2b2b;
+  padding-left: 20px;
+}
+
+.card_description_input::-webkit-scrollbar {
+  width: 1px;
+  height: 0;
+}
+
+.card_description_input::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: transparent;
+}
+
+.card_description_input::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card_update_btn,
+.card_delete_btn {
+  border: none;
+  border-radius: 35px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.card_update_btn {
+  background-color: #0f64a3;
+}
+
+.card_delete_btn {
+  background-color: #d93d3d;
+}
