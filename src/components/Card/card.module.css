@@ -84,6 +84,19 @@
   padding-left: 20px;
 }
 
+.card_description_input::-webkit-scrollbar {
+  width: 1px;
+  height: 0;
+}
+
+.card_description_input::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: transparent;
+}
+
+.card_description_input::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 .card_update_btn,
 .card_delete_btn {

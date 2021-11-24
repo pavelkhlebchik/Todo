@@ -1,5 +1,10 @@
+.short {
+  overflow: hidden;
+}
+
 .full {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   gap: 80px;
